@@ -1,0 +1,309 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.dbmdl
+*.dbmdl
+*.publishsettings
+*.vscode
+
+# Config files
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.*.json
+!appsettings.json
+secrets.json
+
+# Database files
+*.mdf
+*.ldf
+*.sdf
+*.mdb
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Entity Framework Migrations history
+Migrations/*.Designer.cs
+Migrations/*.cs
+!Migrations/ApplicationDbContextModelSnapshot.cs
+
+# NuGet Packages
+packages/
+*.nupkg
+*.nupkg.metadata
+*.nupkg.sha512
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+coverage/
+coverage.json
+*.opencover.xml
+*.coveragexml
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+
+# MSTest
+*.testsettings
+*.vsmdi
+.runsettings
+
+# xUnit
+*.xunit
+*.xunit.xml
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+# Build results of various tools
+[Aa]rtifacts/
+[Tt]est[Rr]esult*/
+
+# dotnet core
+*.pidb
+*.seed
+*.pidb.un~
+
+# Visual Studio 2017/2019 cache files
+*.ide/
+*.filters
+*.props
+*.targets
+*.sqlproj.user
+
+# Visual Studio 2017/2019 generated files
+Generated\ Files/
+[Tt]emp/[Pp]ublish/
+[Rr]elease/[Pp]ublish/
+[Dd]ebug/[Pp]ublish/
+
+# Visual Studio 2017/2019 publish profiles
+*.pubxml
+*.pubxml.user
+
+# Backup files
+*.backup
+*.back
+*.old
+
+# Certificate files
+*.pfx
+*.p12
+*.cer
+*.crt
+*.key
+
+# Publish outputs
+publish/
+publish.zip
+*.publish.xml
+
+# Node modules (if using Node for frontend or tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+docker-compose.vs.debug.yml
+docker-compose.vs.release.yml
+*.csproj.user.docker
+.DockerProfile
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Secrets
+**/secrets.json
+**/appsettings.Secrets.json
+**/Properties/launchSettings.json
+!**/Properties/launchSettings.json.example
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+*.lcov
+
+# Package cache
+*.nuget/
+*.nuget.targets
+*.nuget.props
+
+# Benchmark results
+BenchmarkDotNet.Artifacts/
+
+# Profiling results
+*.profiling/
+*.profiling.json
+trace/
+
+# OpenAPI / Swagger
+swagger/
+swagger.json
+swagger.yaml
+
+# SSL certificates for development
+*.crt
+*.pfx
+!localhost.crt
+!localhost.pfx
+
+# IDE specific files
+*.pidb
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings for C# extensions
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Temp folders
+tmp/
+temp/
+cache/
+.temp/
+.tmp/
+
+# Project-specific
+wwwroot/uploads/
+wwwroot/images/
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Minified files
+*.min.js
+*.min.css
+
+# SourceMap files
+*.map
+
+# TypeScript
+*.tsbuildinfo
+out/
+dist/
+build/
+
+# Angular/React/Vue specific
+node_modules/
+dist/
+build/
+*.ngfactory.ts
+*.ngsummary.json
+*.ngstyle.ts
+
+# Entity Framework Core
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Azure Functions
+local.settings.json
+.vscode/extensions.json
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Add specific exclusions for your project
+# !Keep specific files if needed
+# !.vscode/tasks.json
+# !.vscode/launch.json
