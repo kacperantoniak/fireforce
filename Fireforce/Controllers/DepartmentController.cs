@@ -1,5 +1,6 @@
 ﻿using Fireforce.Models;
 using Fireforce.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,10 +17,30 @@ namespace Fireforce.Controllers
             _service = service;
         }
 
-        [HttpGet(Name = "GetDepartments")]
+        [HttpGet("get")]
         public async Task<IActionResult> GetAll() {
-            var result = await _service.GetAllAsync();
+            IEnumerable<Dept> result = await _service.GetAllAsync();
             return Ok(result);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id) {
+            try
+            {
+                Dept result = await _service.GetByIdAsync(id);
+                return Ok(result);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpDelete("{id}/delete")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+            return Accepted();
         }
     }
 }

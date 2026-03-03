@@ -1,5 +1,7 @@
 @Fireforce_HostAddress = http://localhost:5162
 
-GET {{Fireforce_HostAddress}}/departments/
+GET {{Fireforce_HostAddress}}/department/
 Accept: application/json
 ###
+DELETE {{Fireforce_HostAddress}}/department/{id}/delete
+Accept: application/json
