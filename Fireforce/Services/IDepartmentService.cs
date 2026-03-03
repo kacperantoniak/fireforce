@@ -8,6 +8,5 @@ namespace Fireforce.Services
         Task<Dept> GetByIdAsync(int id);
         Task DeleteAsync(int id);
         Task AddAsync(Dept dept);
-        Task<Dept> Put(Dept dept);
     }
 }

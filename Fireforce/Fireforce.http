@@ -1,7 +1,20 @@
-@Fireforce_HostAddress = http://localhost:5162
+@Fireforce_HostAddress = https://localhost:7122/api
 
-GET {{Fireforce_HostAddress}}/department/
+GET {{Fireforce_HostAddress}}/department/get/
 Accept: application/json
 ###
-DELETE {{Fireforce_HostAddress}}/department/{id}/delete
+GET {{Fireforce_HostAddress}}/department/4/
 Accept: application/json
+###
+DELETE {{Fireforce_HostAddress}}/department/4/delete/
+Accept: application/json
+###
+POST {{Fireforce_HostAddress}}/department/add/
+Content-Type: application/json
+{
+  "voivodeship": "Mazowieckie",
+  "postalCode": "05555",
+  "street": "Jasna",
+  "bnumber": 1
+}
+###

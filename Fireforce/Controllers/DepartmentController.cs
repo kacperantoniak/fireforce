@@ -3,6 +3,7 @@ using Fireforce.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Fireforce.Controllers
 {
@@ -41,6 +42,25 @@ namespace Fireforce.Controllers
         {
             await _service.DeleteAsync(id);
             return Accepted();
+        }
+
+        [HttpPost("add")]
+        public async Task<IActionResult> Add([FromBody] Dept dto) //later on might change it to [FromForm]
+        {
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var dept = new Dept
+            {
+                Voivodeship = dto.Voivodeship,
+                PostalCode = dto.PostalCode,
+                Street = dto.Street,
+                Bnumber = dto.Bnumber,
+                Aptnumber = dto.Aptnumber,
+            };
+
+            await _service.AddAsync(dept);
+            return Ok(dept);
         }
     }
 }

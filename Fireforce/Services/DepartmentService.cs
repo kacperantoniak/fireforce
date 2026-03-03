@@ -15,6 +15,8 @@ namespace Fireforce.Services
 
         public async Task AddAsync(Dept dept)
         {
+            //business logic here- validate data
+            //add valid voivodeship names to database and check if given voivodeship matches with database
             await _context.Depts.AddAsync(dept);
             await _context.SaveChangesAsync();
         }

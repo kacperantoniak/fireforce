@@ -15,6 +15,7 @@ builder.Services.AddDbContext<FireforceContext>(options => {
 });
 
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<ICarService, CarService>();
 
 var app = builder.Build();
 
