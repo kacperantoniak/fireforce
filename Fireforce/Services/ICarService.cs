@@ -2,12 +2,13 @@
 
 namespace Fireforce.Services
 {
-    public interface ICarService
+    public interface ICarService : IGenericService<Car>
     {
-        Task<IEnumerable<Car>> GetAllAsync();
-        Task<Car> GetByIdAsync(int id);
-        Task DeleteAsync(int id);
-        Task AddAsync(Car car);
-        Task<Car> UpdateAsync(Car car);
+        //this might be redundant now
+        //Task<IEnumerable<Car>> GetAllAsync();
+        //Task<Car> GetByIdAsync(int id);
+        //Task DeleteAsync(int id);
+        //Task AddAsync(Car car);
+        //Task<Car> UpdateAsync(Car car);
     }
 }

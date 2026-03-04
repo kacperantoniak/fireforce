@@ -36,5 +36,10 @@ namespace Fireforce.Services
             //if result == null throw exception, else return result
             return await _context.Depts.FindAsync(id) ?? throw new KeyNotFoundException($"Depratment with id: {id} not found");
         }
+
+        public Task<Dept> UpdateAsync(Dept enity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

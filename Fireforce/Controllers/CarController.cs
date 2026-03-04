@@ -3,7 +3,7 @@ using Fireforce.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fireforce.Controllers
-{
+{//redundat, creating generic controller base that ll make code cleaner
     [ApiController]
     [Route("api/[controller]")]
     public class CarController : ControllerBase
@@ -21,6 +21,25 @@ namespace Fireforce.Controllers
             return Ok(result);
         }
 
-        //i'll do more later i'm done for today
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            try
+            {
+                Car result = await _service.GetByIdAsync(id);
+                return Ok(result);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpDelete("{id}/delete")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+            return Accepted();
+        }
     }
 }
